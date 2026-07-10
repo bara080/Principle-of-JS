@@ -1,0 +1,11 @@
+{
+  "name": "learning-javascript",
+  "version": "1.0.0",
+  "description": "A structured learning roadmap and study notes for JavaScript",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test --test-timeout=5000 \"practice/**/*.test.js\"",
+    "test:watch": "node --test --watch --test-timeout=5000 \"practice/**/*.test.js\""
+  }
+}
