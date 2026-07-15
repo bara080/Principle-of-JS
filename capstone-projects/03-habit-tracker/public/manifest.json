@@ -1,0 +1,9 @@
+{
+  "name": "Habit Tracker",
+  "short_name": "Habits",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b0b0b",
+  "icons": []
+}

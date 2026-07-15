@@ -1,0 +1,12 @@
+{
+  "name": "mdc",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "bin": { "mdc": "./bin/mdc.js" },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "start": "node bin/mdc.js"
+  }
+}

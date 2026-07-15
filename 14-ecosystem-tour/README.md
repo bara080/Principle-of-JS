@@ -1,17 +1,52 @@
 # Module 14 — Ecosystem Tour
 
-You don't need all of these. Pick one path and go deep.
+Practical guides to the tools that show up on every real project. One folder
+per topic. Each guide follows the same shape:
 
-- [ ] Frontend libraries — React, Preact, Vue
-- [ ] Utilities — Lodash, Day.js, Axios
-- [ ] Frameworks — Next.js, Nuxt, Astro, Remix
-- [ ] Backend — Express, Fastify, NestJS, Hono
-- [ ] WebSockets — Socket.io, ws
-- [ ] Auth — JWT, Passport.js, bcrypt
-- [ ] Mobile — React Native, Expo
-- [ ] Desktop — Electron, Tauri
-- [ ] Scraping — Puppeteer, Playwright
+- **What it is**
+- **When to reach for it**
+- **When to avoid it**
+- **Minimum-viable setup**
+- **What to remember for interviews**
 
----
+## Layout
 
-Back to the [roadmap](../README.md).
+```text
+14-ecosystem-tour/
+├── README.md          — you are here
+├── nodejs/
+├── npm/
+├── package-json/
+├── npx/
+├── eslint/
+├── prettier/
+├── babel/
+├── vite/
+├── webpack/
+├── rollup/
+├── parcel/
+├── typescript/
+├── git-workflow/
+├── env-vars/
+├── debugging/
+├── vscode/
+└── devtools/
+```
+
+## Suggested reading order
+
+1. `nodejs` → `npm` → `package-json` → `npx` (foundation)
+2. `eslint` + `prettier` (quality baseline for any repo)
+3. `typescript` (the type layer)
+4. `vite` (the modern bundler for apps) — skim `webpack`, `rollup`, `parcel`
+   for comparison
+5. `babel` (mostly historical context now)
+6. `env-vars`, `git-workflow` (day-to-day)
+7. `debugging`, `vscode`, `devtools` (productivity)
+
+## Path recommendations
+
+- **Backend Node** — `nodejs`, `npm`, `package-json`, `env-vars`, `typescript`.
+- **React app** — `vite`, `typescript`, `eslint`, `prettier`, `devtools`.
+- **Library author** — `typescript`, `rollup` or `tsup`, `package-json`
+  (`exports` field is critical), `vitest`.

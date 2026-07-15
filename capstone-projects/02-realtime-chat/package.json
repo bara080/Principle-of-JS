@@ -1,0 +1,16 @@
+{
+  "name": "realtime-chat",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "load": "node src/client-load.js 50"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

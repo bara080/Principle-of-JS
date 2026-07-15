@@ -1,0 +1,11 @@
+{
+  "name": "admin-dashboard",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "serve": "npx http-server public -p 5173"
+  }
+}

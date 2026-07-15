@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Habit Tracker</title>
+    <link rel="manifest" href="./manifest.json" />
+    <style>
+      body { font-family: system-ui; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+      #list { list-style: none; padding: 0; }
+      #list li { padding: 0.5rem; border-bottom: 1px solid #eee; display: flex; gap: 0.5rem; align-items: center; }
+      #list .name { flex: 1; }
+      .streak { font-variant-numeric: tabular-nums; }
+      button { cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Habits</h1>
+    <form id="add">
+      <input name="name" placeholder="e.g. Read 20 pages" required />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="list" aria-live="polite"></ul>
+    <p><button id="export">Export JSON</button>
+       <label>Import: <input id="import" type="file" accept="application/json" /></label></p>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin — Orders</title>
+    <style>
+      body { font-family: system-ui; margin: 0; padding: 1rem; }
+      #kpis { display: flex; gap: 1rem; margin-bottom: 1rem; }
+      .kpi { flex: 1; padding: 1rem; border: 1px solid #ddd; border-radius: 0.5rem; background: #fafafa; }
+      .kpi .v { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+      #filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; align-items: center; }
+      #list { height: 60vh; border: 1px solid #ddd; border-radius: 0.5rem; }
+      .row { display: grid; grid-template-columns: 8rem 1fr 8rem 8rem 8rem; padding: 0 1rem; align-items: center; border-bottom: 1px solid #f2f2f2; }
+      .row.head { background: #f8f8f8; font-weight: 600; position: sticky; top: 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Orders</h1>
+
+    <section id="kpis">
+      <div class="kpi"><div>Orders</div><div class="v" id="k-count">—</div></div>
+      <div class="kpi"><div>Revenue</div><div class="v" id="k-total">—</div></div>
+      <div class="kpi"><div>Paid</div><div class="v" id="k-paid">—</div></div>
+    </section>
+
+    <section id="filters">
+      <input id="q" type="search" placeholder="search customer" />
+      <select id="status">
+        <option value="">any status</option>
+        <option value="paid">paid</option>
+        <option value="pending">pending</option>
+        <option value="refunded">refunded</option>
+        <option value="cancelled">cancelled</option>
+      </select>
+      <select id="sort">
+        <option value="createdAt:desc">newest first</option>
+        <option value="createdAt:asc">oldest first</option>
+        <option value="totalCents:desc">highest revenue</option>
+        <option value="totalCents:asc">lowest revenue</option>
+      </select>
+    </section>
+
+    <div class="row head">
+      <span>ID</span><span>Customer</span><span>Status</span><span>Total</span><span>Date</span>
+    </div>
+    <div id="list"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

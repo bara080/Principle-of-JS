@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+    <style>
+      body { font-family: system-ui; max-width: 32rem; margin: 2rem auto; padding: 1rem; }
+      ul { list-style: none; padding: 0; }
+      li { display: flex; gap: 0.5rem; padding: 0.25rem; border-bottom: 1px solid #eee; }
+      li.done { text-decoration: line-through; opacity: 0.5; }
+      button { cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <form id="add">
+      <input name="text" placeholder="What needs doing?" required autofocus />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="list" aria-live="polite"></ul>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

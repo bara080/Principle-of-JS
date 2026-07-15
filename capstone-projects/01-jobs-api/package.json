@@ -1,0 +1,12 @@
+{
+  "name": "jobs-api",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "test": "node --test \"tests/**/*.test.js\""
+  }
+}

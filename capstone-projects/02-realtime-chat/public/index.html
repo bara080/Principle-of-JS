@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chat</title>
+    <style>
+      body { font-family: system-ui; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+      #log { border: 1px solid #ccc; padding: 0.5rem; height: 20rem; overflow-y: scroll; background: #fafafa; }
+      #log .msg { margin: 0.25rem 0; }
+      #log .name { font-weight: bold; margin-right: 0.5rem; }
+      #log .error { color: crimson; }
+      form { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+      input[type=text] { flex: 1; padding: 0.5rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Chat</h1>
+    <p><label>Name: <input id="name" value="anon" /></label>
+       <label>Room: <input id="room" value="general" /></label>
+       <button id="connect">Connect</button></p>
+    <div id="log" aria-live="polite"></div>
+    <form id="send">
+      <input id="text" type="text" placeholder="say something" required autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+    <script type="module" src="./client.js"></script>
+  </body>
+</html>
